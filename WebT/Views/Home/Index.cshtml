@@ -1,0 +1,23 @@
+﻿@model IEnumerable<WebT.Models.Event>
+@{
+    ViewBag.Title = "Всі події";
+}
+
+<a asp-action="Create">Додати подію</a>
+<table class="table">
+    <tr>
+        <td>Назва</td>
+        <td>Місце</td>
+        <td>Початок</td><td>Кінець</td>
+        <td>Опис</td>
+    </tr>
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>@item.nameEvent</td>
+        <td>@item.placeEvent</td>
+        <td>@item.startDateEvent</td><td>@item.endDateEvent</td>
+        <td>@item.descriptionEvent</td>
+    </tr>
+    }
+</table>

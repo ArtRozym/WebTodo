@@ -1,0 +1,35 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@model WebT.Models.Event
+@{
+    ViewBag.Title = "Додання події";
+}
+
+<form asp-action="create" asp-controller="home">
+    <div class="form-group">
+        <label asp-for="nameEvent" class="control-label">Назва події:</label>
+        <input type="text" asp-for="nameEvent" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="placeEvent" class="control-label">Місце події:</label>
+        <input type="text" asp-for="placeEvent" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="startDateEvent" class="control-label">Початок події:</label>
+        <input type="datetime" asp-for="startDateEvent" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="endDateEvent" class="control-label">Кінець події:</label>
+        <input type="datetime" asp-for="endDateEvent" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="descriptionEvent" class="control-label">Опис події:</label>
+        <input type="text" asp-for="descriptionEvent" class="form-control" />
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Send" class="btn btn-default" />
+    </div>
+</form>
+
